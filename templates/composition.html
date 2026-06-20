@@ -121,6 +121,19 @@
         <h2>Notes</h2>
         <p>{{ page.extra.notes }}</p>
     </section>
+    {% endif %} {% if page.extra.soundcloud_live_url %}
+    <div class="soundcloud-embed">
+        <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url={{ page.extra.soundcloud_live_url | urlencode }}&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+            title="{{ page.title }} on SoundCloud"
+        >
+        </iframe>
+    </div>
     {% endif %} {% if page.extra.soundcloud_url %}
     <div class="soundcloud-embed">
         <iframe
